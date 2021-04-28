@@ -61,3 +61,5 @@ RemoteSystemsTempFiles
 # VS
 obj/
 .vs
+
+data/

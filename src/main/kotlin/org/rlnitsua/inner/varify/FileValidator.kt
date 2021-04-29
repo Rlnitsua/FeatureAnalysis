@@ -22,8 +22,8 @@ fun checkFileLegal(filePath: String) {
         val otherLineElementCount = parseOriginalFileLine(line).size
         if (elementCount != otherLineElementCount) {
             bufferedReader.close()
-            throw FileIllegalException("Line $lineNum element size is : $otherLineElementCount" +
-                    " but other lines is $elementCount !")
+            throw FileIllegalException("Line ${lineNum}th element size is : $otherLineElementCount" +
+                    ",but other lines is $elementCount !")
         }
         line = bufferedReader.readLine()
         lineNum++

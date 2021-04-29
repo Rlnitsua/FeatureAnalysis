@@ -7,6 +7,6 @@ class TestFileValidator {
 
     @Test
     fun test() {
-        checkFileLegal("./data/Origin.dat")
+        checkFileLegal("./dat/Origin.dat")
     }
 }

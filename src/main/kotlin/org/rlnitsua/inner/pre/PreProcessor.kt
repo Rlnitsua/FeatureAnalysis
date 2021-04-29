@@ -5,7 +5,7 @@ import org.rlnitsua.inner.utils.parseOriginalFileLine
 import java.io.*
 import java.lang.StringBuilder
 
-const val INTERMEDIATE_FILE = "./data/IntermediateFile.dat"
+const val INTERMEDIATE_FILE = "./dat/IntermediateFile.dat"
 
 fun generateIntermediateFile(filePath: String,
                              targetElementName: String? = null,
@@ -68,9 +68,8 @@ private fun generateIntermediateFile(filePath: String, startTime: Double) {
             }
         }
         // remove the last '_'
-        newFileLineContent.substring(0, newFileLineContent.length - 1)
         // write content and a new line
-        bufferedWriter.write(newFileLineContent.toString())
+        bufferedWriter.write(newFileLineContent.substring(0, newFileLineContent.length - 1).toString())
         if (currentElementIndex != elementNameList.size - 1) {
             bufferedWriter.newLine()
         }

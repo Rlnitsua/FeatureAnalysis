@@ -1,6 +1,6 @@
 package org.rlnitsua.inner.calculate
 
-interface ICalculator<P : Comparable<P>> {
+interface ICalculator<P> {
     fun max(): P
     fun maxOfRange(start: Int, end: Int): P
 

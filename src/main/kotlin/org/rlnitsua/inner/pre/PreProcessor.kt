@@ -1,7 +1,6 @@
 package org.rlnitsua.inner.pre
 
 import org.rlnitsua.inner.data.MetaData
-import org.rlnitsua.inner.data.Pair
 import org.rlnitsua.inner.utils.parseOriginalFileLine
 import java.io.*
 import java.lang.StringBuilder
@@ -25,7 +24,7 @@ private fun calculateTime(filePath: String,
     val file = File(filePath)
     val bufferedReader = BufferedReader(FileReader(file))
 
-    val metaData = MetaData<Pair>(targetElementName)
+    val metaData = MetaData<Double, Pair<Double, Double>>(targetElementName)
     var line: String? = bufferedReader.readLine()
     val targetElementIndex = findTargetElementIndex(line ?: "", targetElementName)
     val iterator = bufferedReader.lineSequence().iterator()

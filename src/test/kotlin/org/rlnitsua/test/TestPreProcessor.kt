@@ -1,4 +1,4 @@
-package org.rlnitsua
+package org.rlnitsua.test
 
 import org.junit.Test
 import org.rlnitsua.inner.data.MetaData

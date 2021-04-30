@@ -7,6 +7,6 @@ class TestRandomFile {
 
     @Test
     fun test() {
-        RandomFile().generateLegalFile(10, 10000)
+        RandomFile().generateLegalFile(50, 10_0000)
     }
 }

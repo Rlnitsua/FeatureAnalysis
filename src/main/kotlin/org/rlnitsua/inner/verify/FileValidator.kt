@@ -1,4 +1,4 @@
-package org.rlnitsua.inner.varify
+package org.rlnitsua.inner.verify
 
 import org.rlnitsua.inner.exception.FileIllegalException
 import org.rlnitsua.inner.utils.parseOriginalFileLine
@@ -33,4 +33,8 @@ fun checkOriginalFileLegal(filePath: String) {
     if (lineNum < 2) {
         throw FileIllegalException("The content of the file must be larger than two lines !")
     }
+}
+
+fun checkWritePreferenceFileLegal(preferenceFilePath: String) {
+    TODO()
 }

@@ -51,35 +51,10 @@ class RandomFile {
         bufferedWriter.close()
     }
 
-    private fun randomName(): String {
-        val list = mutableListOf<Char>().apply {
-            "1234567890abcdefghijklmnopqrstuvwxyz".forEach { this.add(it) }
-        }
-        return StringBuilder().apply {
-            (1..(4..5).random()).onEach {
-                append(list.random())
-            }
-        }.toString()
-    }
-
     private fun randomTime(): String {
-        time += (Random.nextDouble() * 10)
+        time += Random.nextDouble() * 10
         return NumberFormat.getInstance().apply {
             maximumFractionDigits = 2
         }.format(time)
-    }
-
-    private fun randomValue(): String {
-        return NumberFormat.getInstance().apply {
-            maximumFractionDigits = 2
-        }.format(Random.nextDouble() * 10)
-    }
-
-    private fun randomSpaces(): String {
-        return StringBuilder().apply {
-            (1..(1..5).random()).onEach {
-                this.append(" ")
-            }
-        }.toString()
     }
 }

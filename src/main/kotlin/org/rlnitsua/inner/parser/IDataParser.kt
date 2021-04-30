@@ -1,5 +1,8 @@
-package org.rlnitsua
+package org.rlnitsua.inner.parser
+
+import org.rlnitsua.inner.data.MetaData
 
 interface IDataParser {
-    fun queryDataByName(name: String)
+    fun parse()
+    fun <T: Comparable<T>, P: Pair<T, T>> queryDataByName(name: String): MetaData<T, P>
 }

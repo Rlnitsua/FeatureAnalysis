@@ -9,18 +9,18 @@ const val INTERMEDIATE_FILE = "./dat/IntermediateFile.dat"
 
 fun generateIntermediateFile(filePath: String,
                              targetElementName: String? = null,
-                             condition: Condition? = null) {
-    if (targetElementName == null || condition == null) {
+                             translation: Translation? = null) {
+    if (targetElementName == null || translation == null) {
         generateIntermediateFile(filePath, 0.0)
     } else {
-        val startTime = calculateTime(filePath, targetElementName, condition)
+        val startTime = calculateTime(filePath, targetElementName, translation)
         generateIntermediateFile(filePath, startTime)
     }
 }
 
 private fun calculateTime(filePath: String,
                           targetElementName: String,
-                          condition: Condition): Double {
+                          translation: Translation): Double {
     val file = File(filePath)
     val bufferedReader = BufferedReader(FileReader(file))
 
@@ -36,7 +36,7 @@ private fun calculateTime(filePath: String,
     }
 
     bufferedReader.close()
-    return condition.atThisTime(metaData)
+    return translation.atThisTime(metaData)
 }
 
 private fun generateIntermediateFile(filePath: String, startTime: Double) {

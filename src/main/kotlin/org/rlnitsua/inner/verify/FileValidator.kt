@@ -7,7 +7,7 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileReader
 
-fun checkFileLegal(filePath: String) {
+fun checkOriginalFileLegal(filePath: String) {
     val file = File(filePath)
     if (!file.exists()) {
         throw FileNotFoundException("file $filePath is not found !")
